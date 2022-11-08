@@ -1,0 +1,24 @@
+DROP DATABASE IF EXISTS GLIST;
+
+CREATE DATABASE GLIST;
+
+USE GLIST;
+
+CREATE TABLE list (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  listName VARCHAR(255)
+);
+
+CREATE TABLE listItem (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  listItemName VARCHAR(255) NOT NULL,
+  location VARCHAR(255) NOT NULL,
+  notes VARCHAR(255),
+  type VARCHAR(255),
+  image VARCHAR(255),
+  listId INT,
+  FOREIGN KEY (listId) REFERENCES list (id) ON DELETE CASCADE
+);
+
+CREATE INDEX list_id ON list (id);
+CREATE INDEX list_item_id ON listItem (listId);
