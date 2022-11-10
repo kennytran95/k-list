@@ -5,7 +5,6 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>K-List</title>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"

@@ -13,7 +13,7 @@ import { useUser } from "@auth0/nextjs-auth0";
 export default function NavBar() {
   const { user, error, isLoading } = useUser();
 
-  console.log(user, "data");
+  // console.log(user, "data");
 
   if (isLoading) {
     return (
