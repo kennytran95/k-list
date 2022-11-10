@@ -1,5 +1,5 @@
 import * as React from "react";
-import listData from "../../dummyData.js";
+import listData from "../dummyData.js";
 import AddList from "./ListComponents/AddList";
 import Modal from "./AddListItemModal/Modal";
 import EditModal from "./EditListNameModal/EditModal";
