@@ -1,6 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 const db = require("../database/mysqldatabase").dbConnection;
-const yelpconfig = require("../../yelpconfig");
 const axios = require("axios");
 
 export default function handler(req, res) {
@@ -13,7 +12,7 @@ export default function handler(req, res) {
           `https://api.yelp.com/v3/businesses/search?term=${businessName}&location=${location}&limit=3`,
           {
             headers: {
-              Authorization: `Bearer ${yelpconfig.yelp_api_key}`,
+              Authorization: `Bearer ${process.env.yelp_api_key}`,
             },
           }
         )

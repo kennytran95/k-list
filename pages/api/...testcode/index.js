@@ -3,7 +3,6 @@ const path = require("path");
 const morgan = require("morgan");
 const cors = require("cors");
 const axios = require("axios");
-const yelpconfig = require("../yelpconfig");
 const db = require("./database/mysqldatabase.js").dbConnection;
 
 const PORT = 3000;
@@ -108,7 +107,7 @@ app.get("/yelp/:business/:location", (req, res) => {
       `https://api.yelp.com/v3/businesses/search?term=${req.params.business}&location=${req.params.location}&limit=3`,
       {
         headers: {
-          Authorization: `Bearer ${yelpconfig.yelp_api_key}`,
+          Authorization: `Bearer ${process.env.yelp_api_key}`,
         },
       }
     )
