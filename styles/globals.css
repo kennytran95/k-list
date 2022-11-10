@@ -2,8 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Roboto", Helvetica Neue, sans-serif;
 }
 
 a {
@@ -13,16 +12,6 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }
 
 * {
@@ -79,20 +68,20 @@ html {
   /* border: solid 5px green; */
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 .list-container {
-  border: solid 5px transparent;
+  /* border: solid 5px blue; */
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 30px 0px;
-  margin: 2rem 2rem;
+  margin: 2rem 0rem;
   transition: all 200ms ease-in-out;
-  width: 25vw;
+  width: 100vw;
   /* height: 800px; */
   text-align: center;
 }
@@ -101,9 +90,29 @@ html {
   width: 0em;
 }
 
-.list-container:hover {
-  border: solid 2px purple;
+.header-cont {
+  position: relative;
+  /* border: solid 5px green; */
+  box-shadow: 0 0 2rem 0 rgba(167, 11, 11, 0.2);
+  padding: 1rem 5rem;
+  margin: 2rem;
 }
+
+.header-cont:before {
+  content: "";
+  position: absolute;
+  /* inset: 0 100px 0px 100px; */
+  /* background-color: rgba(128, 0, 128, 0.8); */
+  /* box-shadow: 0 0 2rem 0 rgba(167, 11, 11, 0.2); */
+  filter: blur(1px);
+  border-radius: 6px;
+  padding: 2rem 8rem;
+  margin: 2rem;
+}
+
+/* .list-container:hover {
+  border: solid 2px purple;
+} */
 
 .list-name {
   text-transform: capitalize;
@@ -117,13 +126,12 @@ html {
 .list-item-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 100%;
-  height: 50vh;
   overflow: scroll;
-  margin: 0px 10px;
-  /* border: solid 5px blue; */
+  /* margin: 0px 10px; */
+  /* border: solid 5px red; */
 }
 
 .list-item-container::-webkit-scrollbar {
@@ -133,6 +141,37 @@ html {
 .card-entry {
   /* border: solid 5px green; */
   margin: 10px 0px;
+  min-width: 600px;
+}
+
+.location-text {
+  /* background-color: red; */
+  text-align: left;
+  border: solid 5px red;
+  margin: 0;
+  padding: 0;
+}
+
+.business-name-text {
+  text-align: center;
+  /* border: solid 5px red; */
+  font-size: 24px;
+  margin: 0px;
+  padding: 20px 0px 0px;
+}
+
+.business-category-text {
+  text-align: center;
+  /* border: solid 5px red; */
+  font-size: 16px;
+  margin-left: auto;
+  padding: 0;
+}
+
+.notes-content-text {
+  font-weight: 200;
+  font-size: 12px;
+  /* color: yellow; */
 }
 
 /* AddList */
@@ -149,7 +188,7 @@ html {
 }
 
 .add-list-container:hover {
-  border: solid 2px purple;
+  border: solid 2px rgb(0, 162, 255);
 }
 
 .form-container {

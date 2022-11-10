@@ -10,7 +10,7 @@ import Collapse from "@mui/material/Collapse";
 import Avatar from "@mui/material/Avatar";
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import { blue } from "@mui/material/colors";
+import { blue, orange, red } from "@mui/material/colors";
 import NotesIcon from "@mui/icons-material/Notes";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import EditIcon from "@mui/icons-material/Edit";
@@ -39,7 +39,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   return <IconButton {...other} />;
 })(({ theme, expand }) => ({
   transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
-  marginLeft: "auto",
+  marginRight: "auto",
   transition: theme.transitions.create("transform", {
     duration: theme.transitions.duration.shortest,
   }),
@@ -73,48 +73,29 @@ const CardEntry: React.FC<Props> = ({ listItem }) => {
 
   return (
     <section className="card-entry">
-      <Card sx={{ maxWidth: 345 }}>
-        <CardHeader
-          avatar={
-            <Avatar sx={{ bgcolor: blue[300] }} aria-label="recipe">
-              R
-            </Avatar>
-          }
-          action={
-            <IconButton
-              onClick={() => deleteListItem(listItem.listItemId)}
-              aria-label="settings"
-            >
-              <ClearIcon />
-            </IconButton>
-          }
-          title={listItem.itemName.toUpperCase()}
-          subheader={listItem.type}
-        />
+      <Card sx={{ maxWidth: 600 }}>
         <CardMedia
           component="img"
           height="194"
+          width="400"
           image={listItem.image}
           alt="List Image"
           title="food image"
         />
-        <CardContent>
-          <Typography variant="body2" color="text.secondary">
-            {listItem.location}
-          </Typography>
-        </CardContent>
+        <p className="business-name-text">{listItem.itemName.toUpperCase()}</p>
+        <div>
+          <p className="business-category-text">
+            {listItem.type} - {listItem.location}
+          </p>
+        </div>
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <CardContent className="notes-content-text">
+            <h2 style={{ textDecoration: "underline" }}>Notes</h2>
+            <br />
+            <p>{listItem.notes}</p>
+          </CardContent>
+        </Collapse>
         <CardActions disableSpacing>
-          <IconButton
-            aria-label="edit"
-            onClick={() =>
-              ModalFunctions.setEditNotesModal(listItem.listItemId)
-            }
-          >
-            <EditIcon />
-          </IconButton>
-          <IconButton aria-label="share">
-            <ContentCopyIcon />
-          </IconButton>
           <ExpandMore
             expand={expanded}
             onClick={handleExpandClick}
@@ -123,13 +104,24 @@ const CardEntry: React.FC<Props> = ({ listItem }) => {
           >
             <NotesIcon />
           </ExpandMore>
+          {/* <IconButton aria-label="share">
+            <ContentCopyIcon />
+          </IconButton> */}
+          <IconButton
+            aria-label="edit"
+            onClick={() =>
+              ModalFunctions.setEditNotesModal(listItem.listItemId)
+            }
+          >
+            <EditIcon />
+          </IconButton>
+          <IconButton
+            onClick={() => deleteListItem(listItem.listItemId)}
+            aria-label="settings"
+          >
+            <ClearIcon />
+          </IconButton>
         </CardActions>
-        <Collapse in={expanded} timeout="auto" unmountOnExit>
-          <CardContent>
-            <Typography paragraph>Notes:</Typography>
-            <Typography paragraph>{listItem.notes}</Typography>
-          </CardContent>
-        </Collapse>
       </Card>
     </section>
   );

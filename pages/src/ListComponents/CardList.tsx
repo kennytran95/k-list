@@ -70,41 +70,43 @@ const CardList: React.FC<Props> = ({ listEntry }) => {
   }
   return (
     <div className="list-container">
-      <h1 className="list-name">{listEntry.listName}</h1>
-      <ButtonGroup
-        aria-label="medium secondary button group"
-        variant="contained"
-        color="primary"
-        style={{ margin: "0px 0px 40px" }}
-      >
-        <IconButton
-          size="small"
-          color="secondary"
-          onClick={() =>
-            ModalFunctions.setModal(listEntry.listid, listEntry.listName)
-          }
+      <div className="header-cont">
+        <h1 className="list-name">{listEntry.listName}</h1>
+        <ButtonGroup
+          aria-label="medium secondary button group"
+          variant="contained"
+          color="primary"
+          style={{ margin: "0px 0px 40px" }}
         >
-          <AddIcon />
-        </IconButton>
-        <IconButton
-          size="small"
-          color="secondary"
-          onClick={() =>
-            ModalFunctions.setEditModal(listEntry.listid, listEntry.listName)
-          }
-        >
-          <EditIcon />
-        </IconButton>
-        <IconButton
-          size="small"
-          color="secondary"
-          onClick={() => deleteList(listEntry.listid)}
-        >
-          <DeleteIcon />
-        </IconButton>
-      </ButtonGroup>
+          <IconButton
+            size="small"
+            color="secondary"
+            onClick={() =>
+              ModalFunctions.setModal(listEntry.listid, listEntry.listName)
+            }
+          >
+            <AddIcon />
+          </IconButton>
+          <IconButton
+            size="small"
+            color="secondary"
+            onClick={() =>
+              ModalFunctions.setEditModal(listEntry.listid, listEntry.listName)
+            }
+          >
+            <EditIcon />
+          </IconButton>
+          <IconButton
+            size="small"
+            color="secondary"
+            onClick={() => deleteList(listEntry.listid)}
+          >
+            <DeleteIcon />
+          </IconButton>
+        </ButtonGroup>
+      </div>
 
-      <Box sx={{ minWidth: 120 }}>
+      {/* <Box sx={{ minWidth: 120 }}>
         <FormControl fullWidth>
           <InputLabel id="select-sort">Sort By...</InputLabel>
           <Select
@@ -119,7 +121,7 @@ const CardList: React.FC<Props> = ({ listEntry }) => {
             <MenuItem value={30}>Types</MenuItem>
           </Select>
         </FormControl>
-      </Box>
+      </Box> */}
 
       <div className="list-item-container">
         {listEntry.listItems &&

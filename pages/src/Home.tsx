@@ -5,6 +5,7 @@ import Modal from "./AddListItemModal/Modal";
 import EditModal from "./EditListNameModal/EditModal";
 import EditNotesModal from "./EditNotesModal/EditNotesModal";
 import ListData from "./ListComponents/ListData";
+import Navbar from "./NavBar/Navbar";
 import axios from "axios";
 import { list } from "./ListComponents/CardList";
 
@@ -102,7 +103,7 @@ const Home: React.FC = (): JSX.Element => {
     <>
       <ModalContext.Provider value={ModalContextValues}>
         <setListContext.Provider value={setLists}>
-          {/* <Navbar /> */}
+          <Navbar />
           <AddList />
           <ListData lists={lists} />
           {modal && <Modal />}

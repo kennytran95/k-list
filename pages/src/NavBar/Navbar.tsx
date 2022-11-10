@@ -7,41 +7,33 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Avatar from "@mui/material/Avatar";
-import { useAuth0 } from "@auth0/auth0-react";
-import { withAuth0 } from "@auth0/auth0-react";
+import Link from "next/link";
+import { useUser } from "@auth0/nextjs-auth0";
 
-export default function ButtonAppBar() {
-  const {
-    isLoading,
-    isAuthenticated,
-    error,
-    user,
-    loginWithRedirect,
-    logout,
-    getAccessTokenSilently,
-  } = useAuth0();
+export default function NavBar() {
+  const { user, error, isLoading } = useUser();
 
-  // console.log(user);
+  console.log(user, "data");
 
-  // if (isLoading) {
-  //   return (
-  //     <Box sx={{ flexGrow: 1 }}>
-  //       <AppBar position="static">
-  //         <Toolbar>
-  //           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-  //             Still Loading 😴
-  //           </Typography>
-  //         </Toolbar>
-  //       </AppBar>
-  //     </Box>
-  //   );
-  // }
+  if (isLoading) {
+    return (
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              Still Loading 😴
+            </Typography>
+          </Toolbar>
+        </AppBar>
+      </Box>
+    );
+  }
 
   if (error) {
     return <div>Oops... {error.message}</div>;
   }
 
-  if (isAuthenticated) {
+  if (user) {
     return (
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
@@ -56,17 +48,12 @@ export default function ButtonAppBar() {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              G-List
+              K-List
             </Typography>
-            {user?.picture && (
-              <Avatar alt="avatar" src={user?.picture}></Avatar>
-            )}
-            <Button
-              color="inherit"
-              onClick={() => logout({ returnTo: window.location.origin })}
-            >
-              Logout
-            </Button>
+            {user.picture && <Avatar alt="avatar" src={user.picture}></Avatar>}
+            <Link href="/api/auth/logout">
+              <Button color="inherit">Logout</Button>
+            </Link>
           </Toolbar>
         </AppBar>
       </Box>
@@ -88,10 +75,9 @@ export default function ButtonAppBar() {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               G-List
             </Typography>
-
-            <Button color="inherit" onClick={loginWithRedirect}>
-              Login
-            </Button>
+            <Link href="/api/auth/login">
+              <Button color="inherit">Login</Button>
+            </Link>
           </Toolbar>
         </AppBar>
       </Box>
