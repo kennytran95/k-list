@@ -48,7 +48,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## Technologies
-- [React](https://reactjs.org/)
+- [React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Yelp Fusion API](https://fusion.yelp.com/)
 - [MySQL](https://www.mysql.com/)
