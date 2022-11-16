@@ -1,3 +1,17 @@
+# 📃 G-list 
+
+![Glist](https://cdn.discordapp.com/attachments/938570207859970061/1034309097912287313/unknown.png)
+
+Auth0 User Authentication
+
+![Auth0 User Auth](https://cdn.discordapp.com/attachments/938570207859970061/1034302430717952093/glist_user_auth.gif)
+
+List Creation & Editing
+
+![AddList](https://cdn.discordapp.com/attachments/938570207859970061/1034302432181747742/glist_add_list.gif)
+![EditList](https://cdn.discordapp.com/attachments/938570207859970061/1034302431753949224/glist_edit_list.gif)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
