@@ -51,11 +51,17 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB&labelColor=black)
 <br>
 ![Javascript](https://img.shields.io/badge/-Javascript-F0DB4F?style=for-the-badge&labelColor=black&logo=javascript&logoColor=F0DB4F)
+<br>
 ![TypeScript](https://img.shields.io/badge/-Typescript-007acc?style=for-the-badge&labelColor=black&logo=typescript&logoColor=007acc)
+<br>
 ![Yelp](https://img.shields.io/badge/-YelpFusion-a10707?style=for-the-badge&labelColor=black&logo=yelp&logoColor=a10707)
+<br>
 ![Node.js](https://img.shields.io/badge/-Nodejs-3C873A?style=for-the-badge&labelColor=black&logo=node.js&logoColor=3C873A)
+<br>
 ![MySQL](https://img.shields.io/badge/-MySQL-white?style=for-the-badge&labelColor=black&logo=mysql&logoColor=white)
+<br>
 ![Next.js](https://img.shields.io/badge/-NextJS-62cfc9?style=for-the-badge&labelColor=black&logo=next.js&logoColor=white)
+<br>
 ![MaterialUI](https://img.shields.io/badge/-MaterialUI-blue?style=for-the-badge&labelColor=black&logo=MUI&logoColor=white)
 
 
