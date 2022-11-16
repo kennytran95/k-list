@@ -1,6 +1,6 @@
-# 📃 G-list 
+# 📃 K-list 
 
-![Glist](https://cdn.discordapp.com/attachments/938570207859970061/1042529323732701206/Klists.png)
+![Klist](https://cdn.discordapp.com/attachments/938570207859970061/1042529323732701206/Klists.png)
 
 Auth0 User Authentication
 
