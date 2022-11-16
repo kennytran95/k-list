@@ -55,8 +55,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ![Node.js](https://img.shields.io/badge/-Nodejs-3C873A?style=for-the-badge&labelColor=black&logo=node.js&logoColor=3C873A)
 ![MySQL](https://img.shields.io/badge/-MySQL-3C873A?style=for-the-badge&labelColor=black&logo=mysql&logoColor=white)
 ![Next.js](https://img.shields.io/badge/-NextJS-3C873A?style=for-the-badge&labelColor=black&logo=next.js&logoColor=white)
-![MaterialUI](https://img.shields.io/badge/-MaterialUI-3C873A?style=for-the-badge&labelColor=black&logo=materialUI&logoColor=white)
-- [MySQL](https://www.mysql.com/)
-- [Next.JS](https://nextjs.org/)
-- [MaterialUI](https://mui.com/)
+![MaterialUI](https://img.shields.io/badge/-MaterialUI-3C873A?style=for-the-badge&labelColor=black&logo=materialui&logoColor=white)
+
 
