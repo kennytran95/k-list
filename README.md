@@ -2,17 +2,17 @@
 
 ![Klist](https://cdn.discordapp.com/attachments/938570207859970061/1042529323732701206/Klists.png)
 
-Auth0 User Authentication
+🔒🔑Auth0 User Authentication
 
 ![Auth0 User Auth](https://cdn.discordapp.com/attachments/938570207859970061/1042549141416443954/klist_user_auth.gif)
 
-List Creation & Editing
+📒List Creation & Editing
 
 ![AddList](https://cdn.discordapp.com/attachments/938570207859970061/1042549156209762448/klist_add_list.gif)
 ![EditList](https://cdn.discordapp.com/attachments/938570207859970061/1042549163868565544/klist_edit_list.gif)
 
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+⏭This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
@@ -47,7 +47,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-## Technologies
+## 👩🏻‍💻Technologies
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB&labelColor=black)
 <br>
 ![Javascript](https://img.shields.io/badge/-Javascript-F0DB4F?style=for-the-badge&labelColor=black&logo=javascript&logoColor=F0DB4F)
