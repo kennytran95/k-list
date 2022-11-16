@@ -53,8 +53,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ![TypeScript](https://img.shields.io/badge/-Typescript-007acc?style=for-the-badge&labelColor=black&logo=typescript&logoColor=007acc)
 ![Yelp](https://img.shields.io/badge/-YelpFusion-a10707?style=for-the-badge&labelColor=black&logo=yelp&logoColor=a10707)
 ![Node.js](https://img.shields.io/badge/-Nodejs-3C873A?style=for-the-badge&labelColor=black&logo=node.js&logoColor=3C873A)
-![MySQL](https://img.shields.io/badge/-MySQL-3C873A?style=for-the-badge&labelColor=black&logo=mysql&logoColor=white)
-![Next.js](https://img.shields.io/badge/-NextJS-3C873A?style=for-the-badge&labelColor=black&logo=next.js&logoColor=white)
+![MySQL](https://img.shields.io/badge/-MySQL-white?style=for-the-badge&labelColor=black&logo=mysql&logoColor=white)
+![Next.js](https://img.shields.io/badge/-NextJS-62cfc9?style=for-the-badge&labelColor=black&logo=next.js&logoColor=white)
 ![MaterialUI](https://img.shields.io/badge/-MaterialUI-3C873A?style=for-the-badge&labelColor=black&logo=materialui&logoColor=white)
 
 
